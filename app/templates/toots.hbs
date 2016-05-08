@@ -1,7 +1,7 @@
 <h1>My Toot Stream</h1>
 {{#link-to 'toot.new'}}New Toot{{/link-to}}
 <div>
-  {{#each model as |toot|}}
+  {{#each sortedToots as |toot|}}
     <div>{{toot.user.first-name}} - {{toot.body}}</div>
   {{/each}}
 </div>
