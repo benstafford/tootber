@@ -1,3 +1,9 @@
-<h1>Toots</h1>
+<h1>My Toot Stream</h1>
 <a href="#" {{action 'logout'}}>Logout</a>
+
+<div>
+  {{#each model as |toot|}}
+    <div>{{toot.user.first-name}} - {{toot.body}}</div>
+  {{/each}}
+</div>
 

@@ -23,8 +23,11 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth'] = {
+    store: 'simple-auth-session-store:local-storage',
     routeAfterAuthentication: 'toots',
-    routeIfAlreadyAuthenticated: 'toots'
+    routeIfAlreadyAuthenticated: 'toots',
+    authorizer: 'authorizer:custom',
+    crossOriginWhitelist: ['*']
   }
 
   if (environment === 'development') {

@@ -26,10 +26,10 @@ export default Base.extend({
       }).then(function(response) {
         Ember.run(function() {
           resolve({
-            token: response.auth_token
-          })
+            token: response["data"]["attributes"]["auth-token"]
+          });
         });
-      }, function(xhr, status, error) {
+      }, function(xhr) {
         var response = xhr.responseText;
         Ember.run(function() {
           reject(response);
