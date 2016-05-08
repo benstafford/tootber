@@ -1,0 +1,11 @@
+<h2>Create new toot</h2>
+<form>
+  <div>
+    <label>Enter your toot:</label>
+    {{input type="text" value=model.body}}
+  </div>
+  <div>
+    <button {{action 'save'}}>Send</button>
+    <button {{action 'cancel'}}>Cancel</button>
+  </div>
+</form>
